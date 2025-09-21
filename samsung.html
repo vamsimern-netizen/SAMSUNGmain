@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Samsung Showcase - Combined</title>
+
+    <!-- Bootstrap & Font Awesome (kept as in originals) -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <!-- ---------- Styles preserved from both documents (kept verbatim / unmodified) ---------- -->
+    <style>
+        /* Document 1 Styles */
+        body {
+            background-color: white;
+        }
+
+        .cardbody {
+            display: flex;
+            gap: 25px;
+            text-align: center;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+
+        .card {
+            background-color: #f4f4f4;
+        }
+
+        .navbar {
+            background-color: none;
+            position: sticky;
+            border-bottom: solid 0.5px #43b8db;
+        }
+
+        .logo {
+            font-family: sans-serif;
+            letter-spacing: 1.5px;
+            font-weight: bold;
+            color: white;
+        }
+
+        .gap {
+            gap: 10px;
+        }
+
+        .search input {
+            background-color: rgba(255, 255, 255, 0.00);
+            border-radius: 25px;
+            border: none;
+            margin-left: 20px;
+            padding: 5px;
+            margin-right: 20px;
+            padding-right: 5px;
+            width: 50%;
+            outline: none;
+        }
+
+        .search i {
+            color: rgba(255, 255, 255, 0.15);
+        }
+
+        .search {
+            background-color: rgba(255, 255, 255, 0.15);
+            border-radius: 25px;
+            width: 16%;
+            margin-right: 50px;
+            border: solid 1px rgba(255, 255, 255, 0.5);
+        }
+
+        .navbar i {
+            color: white;
+        }
+
+        .outside {
+            display: flex;
+            gap: 10px;
+        }
+
+        .search-icon i {
+            color: rgba(255, 255, 255, 0.7) !important;
+            margin-left: 2px;
+        }
+
+        .image-container {
+            position: relative;
+            width: 100%;
+        }
+
+        .image-container img {
+            width: 100%;
+            display: block;
+        }
+
+        .image-container .heading {
+            position: absolute;
+            top: 16%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-size: 26px;
+        }
+
+        .image-container .link {
+            position: absolute;
+            top: 70%;
+            left: 12%;
+            font-weight: 600;
+            font-size: 15px;
+            background-color: black;
+            border: 1px solid rgba(255, 255, 255, 0.7);
+            border-radius: 25px;
+            padding: 5px 20px;
+            transition: all 0.3s ease;
+        }
+
+        .image-container .link a {
+            color: white;
+            text-decoration: none;
+        }
+
+        .image-container .link:hover {
+            background-color: white;
+            border-color: white;
+        }
+
+        .image-container .link:hover a {
+            color: black;
+        }
+
+        /* Document 2 Styles that belong to S25FE section (kept as original) */
+        .s25fe-personalization .cardbody {
+            justify-content: space-evenly;
+            gap: 8px;
+            text-align: center;
+        }
+
+        .card {
+            background-color: #f4f4f4;
+            padding: 10px;
+            border-radius: 8px;
+        }
+
+        .Cardheader {
+            color: #000;
+            font-weight: 700;
+            font-family: Arial, Helvetica, sans-serif;
+            margin-top: 10px;
+        }
+
+        .cardimage {
+            margin-top: 0px;
+            width: 100%;
+            height: auto;
+        }
+
+        .Cardheader-2 img {
+            margin-top: 20%;
+        }
+
+        .Cardheader-3 img,
+        .Cardheader-4 img {
+            margin-top: 20%;
+        }
+
+        .one,
+        .two,
+        .three,
+        .four {
+            margin-bottom: 5%;
+            width: 250px;
+        }
+
+        .cardimage-2 {
+            margin-top: 30px;
+        }
+
+        /* Document 1 product cards (kept) */
+        .product-card {
+            background-color: whitesmoke;
+            text-align: center;
+            padding: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .product-card img {
+            width: 100%;
+            transition: transform 0.3s ease;
+        }
+
+        .product-card:hover img {
+            transform: scale(1.1);
+        }
+
+        .product-title {
+            font-size: 1.2rem;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .btn-buy {
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: black;
+            color: white;
+            border: none;
+            padding: 8px 20px;
+            border-radius: 25px;
+            font-weight: 500;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            cursor: pointer;
+        }
+
+        .btn-buy:hover {
+            background-color: white;
+            color: black;
+        }
+
+        .card-full {
+            background-color: #fff;
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: nowrap;
+        }
+
+        .card-full .card {
+            width: 24%;
+        }
+
+        /* ---------- AI TVs banner overlay styles (kept exactly as original) ---------- */
+        .doc2-container {
+            gap: 20px;
+            display: flex;
+            position: relative;
+        }
+
+        .doc2-container .header {
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            top: 50%;
+            left: 5%;
+            font-size: 3rem;
+        }
+
+        .doc2-container .para {
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            top: 62%;
+            left: 5%;
+            font-size: 20px;
+        }
+
+        .doc2-container .anchor a {
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            top: 71%;
+            left: 5%;
+            font-size: 13px;
+            font-weight: 400;
+            color: black;
+            text-decoration: none;
+        }
+
+        .doc2-container .anchor a::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 0;
+            height: 2px;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+
+        .doc2-container .anchor a:hover::after {
+            width: 100%;
+        }
+
+        .doc2-container .button p {
+            font-family: Arial, Helvetica, sans-serif;
+            position: absolute;
+            top: 70%;
+            left: 13%;
+            font-size: 13px;
+            font-weight: 400;
+            color: black;
+            border: 1px solid #000;
+            padding: 5px 15px;
+            border-radius: 25px;
+        }
+
+        .doc2-container .button p:hover {
+            background-color: #000;
+            color: white;
+        }
+
+        /* ---------- Document 2 original styles (kept verbatim) ---------- */
+        .full-cont {
+            background-color: #000;
+            color: #fff;
+            font-family: Arial, sans-serif;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .washer-img {
+            max-width: 400px;
+            width: 100%;
+            border-radius: 10px;
+        }
+
+        .headline {
+            font-size: 2.5rem;
+            font-weight: bold;
+            line-height: 1.2;
+        }
+
+        .subtext {
+            font-size: 1.2rem;
+            color: #ccc;
+            margin-bottom: 20px;
+        }
+
+        .btn-outline-light {
+            border-radius: 25px;
+            padding: 8px 25px;
+            font-weight: 500;
+        }
+
+        @media (max-width: 768px) {
+            .headline {
+                font-size: 2rem;
+            }
+
+            .washer-img {
+                max-width: 300px;
+            }
+
+            .text-center-sm {
+                text-align: center;
+            }
+        }
+            .Recommendedfull {
+      background-color: #f8f9fa;
+    }
+
+    .product-section {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 0 15px;
+    }
+
+    .product-slider {
+      display: flex;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      gap: 20px;
+      padding-bottom: 20px;
+      scroll-behavior: smooth;
+    }
+
+    .product-card {
+      background-color: whitesmoke;
+      padding: 20px;
+      border-radius: 10px;
+      text-align: center;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+      flex: 0 0 calc(25% - 15px);
+      scroll-snap-align: start;
+      transition: transform 0.3s ease;
+    }
+
+    .product-card:hover {
+      transform: scale(1.05);
+    }
+
+    .product-card img {
+      max-width: 100%;
+      height: auto;
+      margin-bottom: 15px;
+    }
+
+    .product-price {
+      font-size: 1rem;
+      color: #333;
+    }
+
+    .carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 20px;
+      gap: 10px;
+    }
+
+    .carousel-line {
+      width: 20%;
+      height: 4px;
+      background: linear-gradient(to right, #000, #ccc);
+      border-radius: 2px;
+    }
+
+    .button-group {
+      display: flex;
+      gap: 5px;
+    }
+
+    .arrow-btn {
+      width: 40px;
+      height: 40px;
+      background-color: #fff;
+      border: 1px solid rgba(0, 0, 0, 0.3);
+      border-radius: 50%;
+      color: #000;
+      font-size: 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+    }
+
+    .product-slider::-webkit-scrollbar {
+      display: none;
+    }
+
+    .product-slider {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+    }
+
+    .product-card[id] {
+      scroll-margin-left: 20px;
+    }
+     .explore-heading {
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .story-card {
+            border: none;
+            background: transparent;
+            text-align: center;
+        }
+
+        .story-card-title {
+            margin-top: 10px;
+            font-weight: 500;
+            font-size: 1rem;
+        }
+
+        .story-card img {
+            border-radius: 16px;
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+        }
+
+        /* Progress bar */
+        .progress {
+            height: 3px;
+            background: #e9ecef;
+            margin: 20px auto;
+            max-width: 500px;
+        }
+
+        .progress-bar {
+            background: black;
+        }
+
+        /* Navigation buttons */
+        .carousel-controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            position: absolute;
+            top: 92%;
+            left: 75%;
+        }
+
+        .circle-btn {
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: 1px solid #ddd;
+            background: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+
+        .circle-btn:hover {
+            background: #f8f9fa;
+        }
+
+        .carousel-item {
+            transition: transform 3s ease-in-out;
+            /* 1.5s instead of default 0.6s */
+        }
+    </style>
+</head>
+
+<body class="Recommendedfull">
+    <!-- ---------------- Document 1 Content (kept exactly) ---------------- -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark gap py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"><label class="logo">SAMSUNG</label></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap">
+                    <li class="nav-item"><a class="nav-link active" href="#">Shop</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Mobile</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">TV & AV</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Appliances</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Computing & Displays</a></li>
+                    <li class="nav-item"><a class="nav-link active" href="#">Accessories</a></li>
+                </ul>
+                <div class="search search-icon">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                    <input type="search" placeholder="search" />
+                </div>
+                <div class="outside">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <i class="fa-jelly-fill fa-regular fa-user"></i>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="image-container">
+        <img src="https://images.samsung.com/is/image/samsung/assets/in/home/09-2025/HOME_TS11_Hero-KV_1920x1080_pc_1.jpg?$1920_N_JPG$"
+            alt="Descriptive Alt Text" />
+        <div class="overlay-text link"><a href="#">Learn more</a></div>
+    </div>
+
+    <!-- Document 1 S25FE Personalization (kept exactly) -->
+    <div class="container-fluid s25fe-personalization w-120%">
+        <div class="container-fluid s25fefull ">
+            <img src="https://images.samsung.com/is/image/samsung/assets/in/home/09-2025/Galaxy-S25-FE-Ecosystem_Home_Feature_KV_pc_1440x810_LTR.jpg?$1440_N_JPG$" width="110%"
+                class="img-fluid" />
+        </div>
+        <div class="row">
+            <div class="container cardbody">
+                <div class="card mt-5 one col-4 " style="width: 20%;">
+                    <p class="Cardheader">Galaxy Z Flip7</p>
+                    <img src="https://images.samsung.com/in/smartphones/galaxy-z-flip7/images/galaxy-z-flip7-features-highlights-design-start-mo.jpg?imbypass=true"
+                        class="card-img-top cardimage" alt="..." />
+                </div>
+                <div class="card mt-5 two Cardheader-2 col-4" style="width: 20%;">
+                    <p class="Cardheader">Galaxy Watch8 Classic</p>
+                    <img src="https://images.samsung.com/in/galaxy-watch8-classic/feature/galaxy-watch8-classic-one-ui-8-start-tb.jpg?imbypass=true "
+                        height="60%" class="card-img-top cardimage-2" alt="..." />
+                </div>
+                <div class="card mt-5 pt-2 three Cardheader-3 col-4" style="width: 20%;">
+                    <p class="Cardheader">Galaxy Watch8</p>
+                    <img src="https://cdnpro.eraspace.com/media/catalog/product/g/a/galaxy_watch8_2_1_4.jpg"
+                        class="card-img-top cardimage" height="80%" alt="..." />
+                </div>
+                <div class="card mt-5 pt-2 four Cardheader-4 col-4" style="width: 20%;">
+                    <p class="Cardheader">Galaxy Book5</p>
+                    <img src="https://images.samsung.com/is/image/samsung/p6pim/in/np960qha-kg1in/gallery/in-galaxy-book5-pro-360-16-inch-np960-np960qha-kg1in-thumb-545246667"
+                        class="card-img-top cardimage" height="80%" alt="..." />
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Document 1 AI TVs banner (overlay text preserved exactly as in your original) -->
+    <div class="doc2-container">
+        <img src="https://images.samsung.com/is/image/samsung/assets/in/home/250717/VD-KV-PC_1440x810.png?$1440_N_PNG$"
+            width="100%">
+        <div class="overlay-text header">
+            <p>2025 AI TVs</p>
+        </div>
+        <div class="overlay-text para">
+            <p>Explore new AI TVs</p>
+        </div>
+        <div class="overlay-text anchor"><a href="">Learn more</a></div>
+        <div class="overlay-text button">
+            <p>View all</p>
+        </div>
+    </div>
+
+    <!-- Document 1 product cards (Neo QLED, The Frame, Q-Series, M7) - preserved -->
+    <div class="container card-full py-5">
+        <!-- Product 1 -->
+        <div class="card col-6 col-md-3 product-card">
+            <div class="product-title">Neo QLED 8K</div>
+            <img src="https://images.samsung.com/is/image/samsung/assets/in/ux3/home/MDVD_Feature_Card1_560X560.jpg?$560_560_JPG$"
+                alt="Bespoke AI Refrigerator" class="img-fluid">
+            <button class="btn-buy">Buy Now</button>
+        </div>
+
+        <!-- Product 2 -->
+        <div class="card col-6 col-md-3 product-card">
+            <div class="product-title">The Frame</div>
+            <img src="https://images.samsung.com/is/image/samsung/assets/in/ux3/home/MDVD_Feature_Card2_560X560.jpg?$560_560_JPG$"
+                alt="Bespoke AI Laundry" class="img-fluid">
+            <button class="btn-buy">Buy Now</button>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="card col-6 col-md-3 product-card">
+            <div class="product-title">Q-Series Soundbar</div>
+            <img src="https://images.samsung.com/is/image/samsung/assets/in/ux3/home/MDVD_Feature_Card3_560X560.jpg?$560_560_JPG$"
+                alt="Bespoke AI WindFree AC" class="img-fluid">
+            <button class="btn-buy">Buy Now</button>
+        </div>
+
+        <!-- Product 4 -->
+        <div class="card col-6 col-md-3 product-card">
+            <div class="product-title">Smart Monitor M7</div>
+            <img src="https://images.samsung.com/is/image/samsung/assets/in/home/250807/M7.jpg?$560_560_JPG$"
+                alt="Microwave Ovens" class="img-fluid">
+            <button class="btn-buy">Buy Now</button>
+        </div>
+    </div>
+
+    <!-- ---------------- Document 2 Content (kept exactly as original) ---------------- -->
+    <div class="container full-cont">
+        <div class="row align-items-center justify-content-center">
+            <!-- Left: Product Image -->
+            <div class="col-md-6 d-flex justify-content-center">
+                <img class="wash-img"
+                    src="https://images.samsung.com/is/image/samsung/p6pim/in/wd12db8b85gbtl/gallery/in-wd8400d-wd12db8b85gbtl-542683992?$684_547_PNG$"
+                    alt="Bespoke AI Washer Dryer" class="washer-img img-fluid">
+            </div>
+            <!-- Right: Text -->
+            <div class="col-md-6 d-flex flex-column align-items-start text-center-sm mt-4 mt-md-0">
+                <h1 class="headline">Bespoke AI <br> Washer Dryer</h1>
+                <p class="subtext">No load transfer</p>
+                <a href="#" class="btn btn-outline-light">Buy</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Document 2 product cards (kept exactly) -->
+    <div class="container card-full py-5">
+        <!-- Product 1 -->
+        <div class="card col-6 col-md-3 product-card">
+            <div class="product-title">Bespoke AI Refrigerator</div>
+            <img src="https://images.samsung.com/is/image/samsung/p6pim/in/rf71db9950qdtl/gallery/in-t-style-french-door-32inch-family-hub-rf71db9950qdtl-540400965?$684_547_PNG$"
+                alt="Bespoke AI Refrigerator" class="img-fluid">
+        </div>
+
+        <!-- Product 2 -->
+        <div class="card col-6 col-md-3 product-card">
+            <div class="product-title">Bespoke AI Laundry</div>
+            <img src="https://images.samsung.com/is/image/samsung/p6pim/in/wd12fg5b34bbtl/gallery/in-wd5000f-wd12fg5b34bbtl-548523097?$684_547_PNG$"
+                alt="Bespoke AI Laundry" class="img-fluid">
+            <br>
+        </div>
+
+        <!-- Product 3 -->
+        <div class="card col-6 col-md-3 product-card">
+            <div class="product-title">Bespoke AI WindFree AC</div>
+            <img src="https://images.samsung.com/is/image/samsung/p6pim/in/ar60f19d1zwnna/gallery/in-ar9500tar70f12caawneu-533699-ar60f19d1zwnna-544635281?$684_547_PNG$"
+                alt="Bespoke AI WindFree AC" class="img-fluid">
+        </div>
+
+        <!-- Product 4 -->
+        <div class="card col-6 col-md-3 product-card">
+            <div class="product-title">Microwave Ovens</div>
+            <img src="https://images.samsung.com/is/image/samsung/p6pim/in/mc28a5145vk-tl/gallery/in-mw5100hmc28a5135ck-mc28a5145vk-tl-500320575?$684_547_PNG$"
+                alt="Microwave Ovens" class="img-fluid">
+        </div>
+    </div>
+     <div class="product-section">
+    <h2 class="text-center mb-4">Recommended for You</h2>
+
+    <div class="product-slider">
+      <!-- Product Cards with IDs for anchor navigation -->
+      <div class="product-card" id="card1">
+        <img src="https://images.samsung.com/is/image/samsung/p6pim/in/sm-x930nzsainu/gallery/in-galaxy-tab-s-sm-x930nzsainu-galaxy-tab-s---ultra--wi-fi-----gb-memory--silver-thumb-549198137?$216_216_PNG$" alt="Galaxy Tab S11" />
+        <div class="product-price">
+          <p>Galaxy Tab S11<br />₹85999.00</p>
+        </div>
+      </div>
+
+      <div class="product-card" id="card2">
+        <img src="https://images.samsung.com/is/image/samsung/p6pim/in/f2507/gallery/in-galaxy-z-fold7-f966-sm-f966bdbgins-thumb-547543121?$216_216_PNG$" alt="Galaxy Z Fold7" />
+        <div class="product-price">
+          <p>Galaxy Z Fold7<br />₹186999.00</p>
+        </div>
+      </div>
+
+      <div class="product-card" id="card3">
+        <img src="https://images.samsung.com/is/image/samsung/p6pim/in/qa55ls03faulxl/gallery/in-the-frame-ls03f-qa55ls03faulxl-thumb-545382100?$216_216_PNG$" alt="Samsung Vision A" />
+        <div class="product-price">
+          <p>75" QLED QAE 4K Samsung Vision AI TV<br />₹71990.00</p>
+        </div>
+      </div>
+
+      <div class="product-card" id="card4">
+        <img src="https://images.samsung.com/is/image/samsung/p6pim/in/qa55q8faaulxl/gallery/in-qled-q8f-544772-qa55q8faaulxl-thumb-546563110?$216_216_PNG$" alt="Samsung Vision A" />
+        <div class="product-price">
+          <p>55" QLED Q8F 4K Samsung Vision AI TV<br />₹71990.00</p>
+        </div>
+      </div>
+
+      <div class="product-card" id="card5">
+        <img src="https://images.samsung.com/is/image/samsung/p6pim/in/2401/gallery/in-galaxy-s24-s928-sm-s928bztcins-thumb-539573311?$216_216_PNG$" alt="Samsung S25 Ultra" />
+        <div class="product-price">
+          <p>Samsung S25 Ultra<br />₹171990.00</p>
+        </div>
+      </div>
+
+      <div class="product-card" id="card6">
+        <img src="https://images.samsung.com/is/image/samsung/p6pim/in/2401/gallery/in-galaxy-s24-s928-sm-s928bztcins-thumb-539573311?$216_216_PNG$" alt="Samsung S10 FE" />
+        <div class="product-price">
+          <p>Samsung S10 FE<br />₹42999.00</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Centered Gradient Line with Buttons on Right -->
+    <div class="carousel-controls">
+      <div class="carousel-line"></div>
+      <div class="button-group">
+        <a href="#card1" class="arrow-btn">&#8592;</a>
+        <a href="#card4" class="arrow-btn">&#8594;</a>
+      </div>
+    </div>
+  </div>
+  <div class="container my-5">
+        <h2 class="explore-heading">Explore the Stories</h2>
+        <div id="storiesCarousel" class="carousel slide" data-bs-ride="false">
+            <div class="carousel-inner">
+                <!-- First Slide -->
+                <div class="carousel-item active">
+                    <div class="row g-4">
+                        <div class="col-6 col-md-3">
+                            <div class="card story-card">
+                                <img src="https://images.samsung.com/is/image/samsung/assets/in/home/250814/Explore_Card1_PC_312x312_Samsung-Health.jpg?$312_312_JPG$"
+                                    alt="Samsung Health">
+                                <p class="story-card-title">Samsung Health</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card story-card">
+                                <img src="https://images.samsung.com/is/image/samsung/assets/in/home/250814/Explore_Card2_PC_312x312_Switch-to-Galaxy.jpg?$312_312_JPG$"
+                                    alt="Switch to Galaxy">
+                                <p class="story-card-title">Switch to Galaxy</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card story-card">
+                                <img src="https://images.samsung.com/is/image/samsung/assets/in/home/250814/Explore_Card3_PC_312x312_OneUI.jpg?$312_312_JPG$"
+                                    alt="One UI">
+                                <p class="story-card-title">One UI</p>
+                            </div>
+                        </div>
+                        <div class="col-6 col-md-3">
+                            <div class="card story-card">
+                                <img src="https://images.samsung.com/is/image/samsung/assets/in/home/250814/Explore_Card4_PC_312x312_Samsung-Vision-AI.jpg?$312_312_JPG$"
+                                    alt="Samsung Vision AI">
+                                <p class="story-card-title">Samsung Vision AI</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- Second Slide -->
+                <div class="carousel-item">
+                    <div class="row g-4">
+                        <div class="col-6 col-md-3">
+                            <div class="card story-card">
+                                <img src="https://images.samsung.com/is/image/samsung/assets/in/home/250814/Explore_Card5_PC_312x312_ST.jpg?$312_312_JPG$"
+                                    alt="SmartThings">
+                                <p class="story-card-title">SmartThings</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Progress bar -->
+                <div class="progress">
+                    <div id="progressBar" class="progress-bar" style="width: 50%;"></div>
+                </div>
+
+                <!-- Custom navigation buttons -->
+                <div class="carousel-controls">
+                    <button class="circle-btn" data-bs-target="#storiesCarousel" data-bs-slide="prev">←</button>
+                    <button class="circle-btn" data-bs-target="#storiesCarousel" data-bs-slide="next">→</button>
+                </div>
+        </div>
+    </div>
+    </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+    <script>
+        // Update progress bar on slide
+        const carousel = document.getElementById('storiesCarousel');
+        const progressBar = document.getElementById('progressBar');
+        const totalSlides = carousel.querySelectorAll('.carousel-item').length;
+
+        carousel.addEventListener('slid.bs.carousel', function (e) {
+            const activeIndex = [...carousel.querySelectorAll('.carousel-item')].indexOf(carousel.querySelector('.carousel-item.active'));
+            const progress = ((activeIndex + 1) / totalSlides) * 100;
+            progressBar.style.width = progress + "%";
+        });
+    </script>
+
+    <!-- Bootstrap JS (kept as in originals) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
