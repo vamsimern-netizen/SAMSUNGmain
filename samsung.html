@@ -135,9 +135,14 @@
 
         /* Document 2 Styles that belong to S25FE section (kept as original) */
         .s25fe-personalization .cardbody {
-            justify-content: space-evenly;
+            display: flex;
+            justify-content: space-between;
             gap: 8px;
             text-align: center;
+        }
+
+        .s25fefull {
+            width: 101%;
         }
 
         .card {
@@ -225,17 +230,16 @@
         }
 
         .card-full {
-            background-color: #fff;
             font-family: Arial, sans-serif;
             display: flex;
-            justify-content: center;
-            gap: 20px;
-            flex-wrap: nowrap;
+            justify-content: left;
+            gap: 35px;
+
         }
 
-        .card-full .card {
-            width: 24%;
-        }
+        /* .card-full .card {
+            width: 30%;
+        } */
 
         /* ---------- AI TVs banner overlay styles (kept exactly as original) ---------- */
         .doc2-container {
@@ -306,21 +310,18 @@
         }
 
         /* ---------- Document 2 original styles (kept verbatim) ---------- */
-        .full-cont {
-            background-color: #000;
+        .full-cont .WASH-TEXT {
             color: #fff;
             font-family: Arial, sans-serif;
-            height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
+            position: absolute;
+            top: 40%;
+            left: 60%;
         }
 
-        .washer-img {
-            max-width: 400px;
-            width: 100%;
-            border-radius: 10px;
-        }
+        .WASH-TEXT {}
 
         .headline {
             font-size: 2.5rem;
@@ -353,98 +354,119 @@
                 text-align: center;
             }
         }
-            .Recommendedfull {
-      background-color: #f8f9fa;
-    }
 
-    .product-section {
-      max-width: 1200px;
-      margin: 50px auto;
-      padding: 0 15px;
-    }
+        .Recommendedfull {
+            background-color: #f8f9fa;
+        }
 
-    .product-slider {
-      display: flex;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      gap: 20px;
-      padding-bottom: 20px;
-      scroll-behavior: smooth;
-    }
+        .product-section {
+            max-width: 1200px;
+            margin: 50px auto;
+            padding: 0 15px;
+        }
 
-    .product-card {
-      background-color: whitesmoke;
-      padding: 20px;
-      border-radius: 10px;
-      text-align: center;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-      flex: 0 0 calc(25% - 15px);
-      scroll-snap-align: start;
-      transition: transform 0.3s ease;
-    }
+        .product-slider {
+            display: flex;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            gap: 20px;
+            padding-bottom: 20px;
+            scroll-behavior: smooth;
+        }
 
-    .product-card:hover {
-      transform: scale(1.05);
-    }
+        .product-card {
+            background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            flex: 0 0 calc(25% - 15px);
+            scroll-snap-align: start;
+            transition: transform 0.3s ease;
+        }
+        .product-card-6{
+                        background-color: whitesmoke;
+            padding: 20px;
+            border-radius: 10px;
+            text-align: center;
+            box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+            flex: 0 0 calc(25% - 15px);
+            scroll-snap-align: start;
+            transition: transform 0.3s ease;
+            height: 85%;
+        }
+                .product-card-6 img {
+                    width: 100%;
+            max-width: 100%;
+            margin-top: 10px;
+        }
 
-    .product-card img {
-      max-width: 100%;
-      height: auto;
-      margin-bottom: 15px;
-    }
+        .product-card:hover {
+            transform: scale(1.05);
+        }
 
-    .product-price {
-      font-size: 1rem;
-      color: #333;
-    }
+        .product-card img {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 15px;
+        }
+        .product-card-6 .product-price{
+           margin-top: 35px;
+        }
 
-    .carousel-controls {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin-top: 20px;
-      gap: 10px;
-    }
+        .product-price {
+            font-size: 1rem;
+            color: #333;
+        }
 
-    .carousel-line {
-      width: 20%;
-      height: 4px;
-      background: linear-gradient(to right, #000, #ccc);
-      border-radius: 2px;
-    }
+        .carousel-controls {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 20px;
+            gap: 10px;
+        }
 
-    .button-group {
-      display: flex;
-      gap: 5px;
-    }
+        .carousel-line {
+            width: 20%;
+            height: 4px;
+            background: linear-gradient(to right, #000, #ccc);
+            border-radius: 2px;
+        }
 
-    .arrow-btn {
-      width: 40px;
-      height: 40px;
-      background-color: #fff;
-      border: 1px solid rgba(0, 0, 0, 0.3);
-      border-radius: 50%;
-      color: #000;
-      font-size: 20px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-decoration: none;
-    }
+        .button-group {
+            display: flex;
+            gap: 5px;
+        }
 
-    .product-slider::-webkit-scrollbar {
-      display: none;
-    }
+        .arrow-btn {
+            width: 40px;
+            height: 40px;
+            background-color: #fff;
+            border: 1px solid rgba(0, 0, 0, 0.3);
+            border-radius: 50%;
+            color: #000;
+            font-size: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
 
-    .product-slider {
-      -ms-overflow-style: none;
-      scrollbar-width: none;
-    }
+        .product-slider::-webkit-scrollbar {
+            display: none;
+        }
 
-    .product-card[id] {
-      scroll-margin-left: 20px;
-    }
-     .explore-heading {
+        .product-slider {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+
+        .product-card[id] {
+            scroll-margin-left: 20px;
+        }
+
+        .explore-heading {
             font-size: 2rem;
             font-weight: 700;
             margin-bottom: 25px;
@@ -554,35 +576,52 @@
     </div>
 
     <!-- Document 1 S25FE Personalization (kept exactly) -->
-    <div class="container-fluid s25fe-personalization w-120%">
-        <div class="container-fluid s25fefull ">
-            <img src="https://images.samsung.com/is/image/samsung/assets/in/home/09-2025/Galaxy-S25-FE-Ecosystem_Home_Feature_KV_pc_1440x810_LTR.jpg?$1440_N_JPG$" width="110%"
-                class="img-fluid" />
+    <div class="container-fluid s25fe-personalization">
+        <div class="image-container s25fefull ">
+            <img
+                src="https://images.samsung.com/is/image/samsung/assets/in/home/09-2025/Galaxy-S25-FE-Ecosystem_Home_Feature_KV_pc_1440x810_LTR.jpg?$1440_N_JPG$" />
         </div>
-        <div class="row">
-            <div class="container cardbody">
-                <div class="card mt-5 one col-4 " style="width: 20%;">
+          <div class="container mt-5">
+        <div class="row justify-content-center g-4">
+            <!-- Card 1 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
                     <p class="Cardheader">Galaxy Z Flip7</p>
                     <img src="https://images.samsung.com/in/smartphones/galaxy-z-flip7/images/galaxy-z-flip7-features-highlights-design-start-mo.jpg?imbypass=true"
-                        class="card-img-top cardimage" alt="..." />
-                </div>
-                <div class="card mt-5 two Cardheader-2 col-4" style="width: 20%;">
-                    <p class="Cardheader">Galaxy Watch8 Classic</p>
-                    <img src="https://images.samsung.com/in/galaxy-watch8-classic/feature/galaxy-watch8-classic-one-ui-8-start-tb.jpg?imbypass=true "
-                        height="60%" class="card-img-top cardimage-2" alt="..." />
-                </div>
-                <div class="card mt-5 pt-2 three Cardheader-3 col-4" style="width: 20%;">
-                    <p class="Cardheader">Galaxy Watch8</p>
-                    <img src="https://cdnpro.eraspace.com/media/catalog/product/g/a/galaxy_watch8_2_1_4.jpg"
-                        class="card-img-top cardimage" height="80%" alt="..." />
-                </div>
-                <div class="card mt-5 pt-2 four Cardheader-4 col-4" style="width: 20%;">
-                    <p class="Cardheader">Galaxy Book5</p>
-                    <img src="https://images.samsung.com/is/image/samsung/p6pim/in/np960qha-kg1in/gallery/in-galaxy-book5-pro-360-16-inch-np960-np960qha-kg1in-thumb-545246667"
-                        class="card-img-top cardimage" height="80%" alt="..." />
+                        class="card-img-top cardimage" alt="Galaxy Z Flip7" />
                 </div>
             </div>
+
+            <!-- Card 2 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <p class="Cardheader">Galaxy Watch8 Classic</p>
+                    <img src="https://images.samsung.com/is/image/samsung/assets/in/mx_2507/HOME_Feature-Card_Watch8-Classic_560x560.jpg?$560_560_JPG$"
+                        class="card-img-top cardimage" alt="Galaxy Watch8 Classic" />
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <p class="Cardheader">Galaxy Watch8</p>
+                    <img src="https://cdnpro.eraspace.com/media/catalog/product/g/a/galaxy_watch8_2_1_4.jpg"
+                        class="card-img-top cardimage" alt="Galaxy Watch8" />
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="col-12 col-sm-6 col-md-4 col-lg-3">
+                <div class="card h-100 text-center">
+                    <p class="Cardheader">Galaxy Book5</p>
+                    <img src="https://images.samsung.com/is/image/samsung/p6pim/in/np960qha-kg1in/gallery/in-galaxy-book5-pro-360-16-inch-np960-np960qha-kg1in-thumb-545246667"
+                        class="card-img-top cardimage" alt="Galaxy Book5" />
+                </div>
+            </div>
+
         </div>
+    </div>
+
     </div>
 
     <!-- Document 1 AI TVs banner (overlay text preserved exactly as in your original) -->
@@ -637,16 +676,19 @@
     </div>
 
     <!-- ---------------- Document 2 Content (kept exactly as original) ---------------- -->
-    <div class="container full-cont">
-        <div class="row align-items-center justify-content-center">
+    <div class="image-container full-cont">
+        <div class="image-container-WASH align-items-center justify-content-center">
+            <img class="wash-img"
+                src="https://images.samsung.com/is/image/samsung/assets/in/home/250829/Washer_Dryer_KV_PC_1440x810_withoutText.jpg?$1440_N_JPG$"
+                width="110%" alt="Bespoke AI Washer Dryer" class="washer-img img-fluid">
             <!-- Left: Product Image -->
-            <div class="col-md-6 d-flex justify-content-center">
+            <!-- <div class="d-flex justify-content-center">
                 <img class="wash-img"
-                    src="https://images.samsung.com/is/image/samsung/p6pim/in/wd12db8b85gbtl/gallery/in-wd8400d-wd12db8b85gbtl-542683992?$684_547_PNG$"
+                    src="https://images.samsung.com/is/image/samsung/assets/in/home/250829/Washer_Dryer_KV_PC_1440x810_withoutText.jpg?$1440_N_JPG$" width="100%"
                     alt="Bespoke AI Washer Dryer" class="washer-img img-fluid">
-            </div>
-            <!-- Right: Text -->
-            <div class="col-md-6 d-flex flex-column align-items-start text-center-sm mt-4 mt-md-0">
+            </div> -->
+            <!-- Right: Text-->
+            <div class="WASH-TEXT d-flex flex-column align-items-start text-center-sm mt-4 mt-md-0">
                 <h1 class="headline">Bespoke AI <br> Washer Dryer</h1>
                 <p class="subtext">No load transfer</p>
                 <a href="#" class="btn btn-outline-light">Buy</a>
@@ -679,7 +721,7 @@
         </div>
 
         <!-- Product 4 -->
-        <div class="card col-6 col-md-3 product-card">
+        <div class="card col-6 col-md-2 product-card">
             <div class="product-title">Microwave Ovens</div>
             <img src="https://images.samsung.com/is/image/samsung/p6pim/in/mc28a5145vk-tl/gallery/in-mw5100hmc28a5135ck-mc28a5145vk-tl-500320575?$684_547_PNG$"
                 alt="Microwave Ovens" class="img-fluid">
@@ -733,21 +775,21 @@
       </div>
     </div>
 
-    <!-- Centered Gradient Line with Buttons on Right -->
-    <div class="carousel-controls">
-      <div class="carousel-line"></div>
-      <div class="button-group">
-        <a href="#card1" class="arrow-btn">&#8592;</a>
-        <a href="#card4" class="arrow-btn">&#8594;</a>
-      </div>
+        <!-- Centered Gradient Line with Buttons on Right -->
+        <div class="carousel-controls">
+            <div class="carousel-line"></div>
+            <div class="button-group">
+                <a href="#card1" class="arrow-btn">&#8592;</a>
+                <a href="#card4" class="arrow-btn">&#8594;</a>
+            </div>
+        </div>
     </div>
-  </div>
-  <div class="container my-5">
+    <div class="container my-5">
         <h2 class="explore-heading">Explore the Stories</h2>
         <div id="storiesCarousel" class="carousel slide" data-bs-ride="false">
             <div class="carousel-inner">
                 <!-- First Slide -->
-                <div class="carousel-item active">
+                <div class="carousel active">
                     <div class="row g-4">
                         <div class="col-6 col-md-3">
                             <div class="card story-card">
@@ -793,15 +835,15 @@
                 </div>
             </div>
             <!-- Progress bar -->
-                <div class="progress">
-                    <div id="progressBar" class="progress-bar" style="width: 50%;"></div>
-                </div>
+            <div class="progress">
+                <div id="progressBar" class="progress-bar" style="width: 50%;"></div>
+            </div>
 
-                <!-- Custom navigation buttons -->
-                <div class="carousel-controls">
-                    <button class="circle-btn" data-bs-target="#storiesCarousel" data-bs-slide="prev">←</button>
-                    <button class="circle-btn" data-bs-target="#storiesCarousel" data-bs-slide="next">→</button>
-                </div>
+            <!-- Custom navigation buttons -->
+            <div class="carousel-controls">
+                <button class="circle-btn" data-bs-target="#storiesCarousel" data-bs-slide="prev">←</button>
+                <button class="circle-btn" data-bs-target="#storiesCarousel" data-bs-slide="next">→</button>
+            </div>
         </div>
     </div>
     </div>
